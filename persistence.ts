@@ -3,8 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DATA_FILE = path.resolve(__dirname, "../../../data/verification-state.json");
-
+const DATA_FILE = path.resolve(__dirname, "data/verification-state.json");
 export interface PendingVerification {
   guildId: string;
   userId: string;

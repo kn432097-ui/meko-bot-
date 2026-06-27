@@ -1,5 +1,5 @@
 import { Client, GuildMember, Message } from "discord.js";
-import { logger } from "../lib/logger";
+import { logger } from "./logger";
 import { loadState, saveState, PendingVerification, State } from "./persistence";
 import { buildNickname } from "./nickname";
 

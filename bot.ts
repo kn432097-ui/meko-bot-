@@ -105,6 +105,8 @@ export function startBot() {
     logger.error({ err }, "Discord client error");
   });
 
+  console.log("Attempting Discord login...");
+
   client.login(token).catch((err) => {
     logger.error({ err }, "Failed to log in to Discord");
     process.exit(1);

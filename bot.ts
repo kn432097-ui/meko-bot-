@@ -11,6 +11,8 @@ import { fileURLToPath } from "node:url";
 import { logger } from "./lib/logger";
 import { initVerification } from "./bot/verification";
 
+console.log("BOT FILE LOADED");
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 async function sendScheduledMessage(

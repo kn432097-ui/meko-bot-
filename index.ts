@@ -1,8 +1,10 @@
-import { Router, type IRouter } from "express";
-import healthRouter from "./health";
+import app from "./app";
+import { startBot } from "./bot";
 
-const router: IRouter = Router();
+const PORT = Number(process.env.PORT) || 3000;
 
-router.use(healthRouter);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
-export default router;
+startBot();

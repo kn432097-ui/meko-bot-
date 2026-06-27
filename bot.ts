@@ -8,7 +8,7 @@ import {
 import cron from "node-cron";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { logger } from "./lib/logger";
+import { logger } from "./logger";
 import { initVerification } from "./bot/verification";
 
 console.log("BOT FILE LOADED");

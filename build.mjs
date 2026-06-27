@@ -127,9 +127,17 @@ async function copyAssets() {
   await cp(src, dest, { recursive: true, force: true });
 }
 
+console.log("Starting esbuild...");
+
 buildAll()
-  .then(() => copyAssets())
+  .then(() => {
+    console.log("Build finished successfully");
+    return copyAssets();
+  })
+  .then(() => {
+    console.log("Assets copied");
+  })
   .catch((err) => {
-    console.error(err);
+    console.error("Build failed:", err);
     process.exit(1);
   });
